@@ -1,0 +1,12 @@
+print_square(2)
+##
+##
+
+print_square(4)
+####
+####
+####
+####
+
+print_square(1)
+#
