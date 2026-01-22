@@ -1,10 +1,12 @@
-say_my_name("John", "Smith")
-My name is John Smith
-
-say_my_name("Walter")
-My name is Walter 
-
-say_my_name(12, "Smith")
+"""
+>>> say_my_name("John", "Doe")
+My name is John Doe
+>>> say_my_name("Alice")
+My name is Alice 
+>>> say_my_name(12, "Doe")
 Traceback (most recent call last):
-    ...
 TypeError: first_name must be a string
+>>> say_my_name("John", 3)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+"""
