@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """
-Function that prints a text with 2 new lines after '.', '?', and ':'
+This module provides a function for printing text with indentation.
 """
+
 
 def text_indentation(text):
     """
-    Prints text with 2 new lines after each '.', '?', and ':'
+    Prints text with two new lines after '.', '?', or ':'.
 
     Args:
-        text (str): The text to process
+        text: must be a string
 
     Raises:
         TypeError: if text is not a string
@@ -16,13 +17,12 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
-    chars = ['.', '?', ':']
-    i = 0
+    new_text = ""
+    for char in text:
+        new_text += char
+        if char in ".?:":
+            new_text += "\n\n"
 
-    while i < len(text):
-        print(text[i], end="")
-        if text[i] in chars:
-            print("\n")
-            while i + 1 < len(text) and text[i + 1] == " ":
-                i += 1
-        i += 1
+    lines = new_text.split("\n")
+    for line in lines:
+        print(line.strip())

@@ -1,8 +1,12 @@
-text_indentation("Hello. How are you? I'm fine: thanks.")
+"""
+>>> text_indentation("Hello. How are you? I'm fine:")
 Hello.
 
- How are you?
+How are you?
 
- I'm fine:
+I'm fine:
 
- thanks.
+>>> text_indentation(12)
+Traceback (most recent call last):
+TypeError: text must be a string
+"""
