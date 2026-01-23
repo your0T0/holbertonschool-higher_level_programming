@@ -4,7 +4,7 @@
 3
 
 >>> add_integer(1)
-1
+99
 
 >>> add_integer(100, -2)
 98
