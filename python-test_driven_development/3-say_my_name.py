@@ -19,4 +19,4 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("last_name must be a string")
 
     name = f"My name is {first_name} {last_name}".strip()
-    print(name + "")
+    print(name, flush=True)
