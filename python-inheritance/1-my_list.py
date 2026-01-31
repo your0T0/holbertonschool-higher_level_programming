@@ -1,20 +1,9 @@
 #!/usr/bin/python3
-"""
-Module that defines MyList class
-"""
-
+"""This module defines a custom list class."""
 
 class MyList(list):
-    """Custom list class"""
-
-    def append(self, item):
-        """Append item to the list"""
-        super().append(item)
-
-    def __str__(self):
-        """Return string representation"""
-        return super().__str__()
+    """MyList inherits from list."""
 
     def print_sorted(self):
-        """Return a sorted copy of the list"""
-        return sorted(self)
+        """Prints the list sorted in ascending order."""
+        print(sorted(self)))
