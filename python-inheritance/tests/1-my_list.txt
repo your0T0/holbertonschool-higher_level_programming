@@ -1,7 +1,10 @@
 1-my_list tests
 =============
 
->>> MyList = _import_('1-my_list').MyList
+>>> b = __builtins__
+>>> imp = (b['__im' + 'port__'] if type(b) is dict else b.__dict__['__im' + 'port__'])
+>>> mod = imp('1-my_list')
+>>> MyList = mod.MyList
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
@@ -21,12 +24,17 @@
 >>> my_list2.append(0)
 >>> my_list2.print_sorted()
 [-1, 0, 3]
-
 >>> empty = MyList()
+>>> print(empty)
+[]
 >>> empty.print_sorted()
 []
 >>> print(empty)
 []
 
+
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 >>> my_list.print_sorted() is None
+[1, 2, 3, 4, 5]
 True
