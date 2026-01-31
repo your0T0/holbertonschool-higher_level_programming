@@ -31,6 +31,30 @@ TypeError age must be an integer
 TypeError age must be an integer
 
 >>> try:
+...     bg.integer_validator("age", [3])
+... except Exception as e:
+...     print(type(e).__name__, e)
+TypeError age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", (4,))
+... except Exception as e:
+...     print(type(e).__name__, e)
+TypeError age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", (3, 4))
+... except Exception as e:
+...     print(type(e).__name__, e)
+TypeError age must be an integer
+
+>>> try:
+...     bg.integer_validator("age", None)
+... except Exception as e:
+...     print(type(e).__name__, e)
+TypeError age must be an integer
+
+>>> try:
 ...     bg.integer_validator("age", True)
 ... except Exception as e:
 ...     print(type(e).__name__, e)
