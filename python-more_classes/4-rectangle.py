@@ -46,5 +46,5 @@ class Rectangle:
             return ""
         return "\n".join("#" * self.__width for _ in range(self.__height))
 
-    def -_repr__(self):
+    def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
